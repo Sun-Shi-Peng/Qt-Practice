@@ -52,3 +52,9 @@ compile_commands.json
 *creator.user*
 
 *_qmlcache.qrc
+
+# 忽略名为 build 的文件夹（递归忽略）
+build/
+
+# 忽略 Qt Creator 默认生成的构建目录，如 build-Desktop_Qt_...
+build-*/
