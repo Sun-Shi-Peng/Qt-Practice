@@ -16,15 +16,21 @@ Widget::~Widget()
     delete ui;
 }
 
-void Widget::handleMySignal()
+void Widget::handleMySignal(const QString& text)
 {
-    this->setWindowTitle("处理自定义信号");
+    this->setWindowTitle(text);
 }
 
 void Widget::on_pushButton_clicked()
 {
     // 发送出自定义的信号
     // 发送信号的操作，也可以在任意合适的代码中，不一定非得在构造函数里
-    emit mySignal();
+    emit mySignal("把标题设置为标题1","");
+}
+
+
+void Widget::on_pushButton_2_clicked()
+{
+    emit mySignal("把标题设置为标题2","");
 }
 

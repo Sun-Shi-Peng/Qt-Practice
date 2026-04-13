@@ -18,13 +18,15 @@ public:
     ~Widget() override;
 
 signals:
-    void mySignal();
+    void mySignal(const QString &text,const QString &text2);
 
 public:
-    void handleMySignal();
+    void handleMySignal(const QString &text);
 
 private slots:
     void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::Widget *ui;

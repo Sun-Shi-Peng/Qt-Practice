@@ -23,7 +23,20 @@
     </rect>
    </property>
    <property name="text">
-    <string>发送信号</string>
+    <string>设置文本1为标题</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>150</y>
+     <width>91</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>设置文本2为标题</string>
    </property>
   </widget>
  </widget>
