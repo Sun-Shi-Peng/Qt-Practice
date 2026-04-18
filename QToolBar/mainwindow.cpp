@@ -9,14 +9,29 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    // 创建菜单栏
+    QMenuBar* menuBar=this->menuBar();
+    this->setMenuBar(menuBar);
+
+    // 创建菜单
+    QMenu* menu=new QMenu("文件");
+    menuBar->addMenu(menu);
+
     // 工具栏是需要手动创建出来的，自身不会自动创建
     QToolBar* toolBar=new QToolBar;
     this->addToolBar(toolBar);
 
+    // 创建两个菜单项
     QAction* action1=new QAction("保存");
     QAction* action2=new QAction("打开");
     action1->setIcon(QIcon(":/1.png"));
     action2->setIcon(QIcon(":/2.png"));
+
+    // 菜单项还可以放到菜单中
+    menu->addAction(action1);
+    menu->addAction(action2);
+
+    // 菜单项放到工具栏中
     toolBar->addAction(action1);
     toolBar->addAction(action2);
 
